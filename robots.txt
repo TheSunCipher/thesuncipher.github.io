@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thesuncipher.github.io/sitemap.xml
