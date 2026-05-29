@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSC Viscous Fluid - Image Blend</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000000; 
+            overflow: hidden;
+            transform: translateZ(0); 
+        }
+        canvas {
+            display: block;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="coreFluid"></canvas>
+
+    <script>
+        const canvas = document.getElementById('coreFluid');
+        const ctx = canvas.getContext('2d', { alpha: true });
+
+        let w, h;
+        function init() {
+            w = canvas.width = window.innerWidth;
+            h = canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', init);
+        init();
+
+        const BLACK = '#1c001c';
+        const PINK_N = '#50004d';
+        const PURPLE = '#5e0064';
+        const DEEP_P = '#2e002c';
+        const ZBLACK = '#000000';
+
+        function noise(x, y, z) {
+            let total = 0;
+            let amplitude = 1.0;
+            let frequency = 0.0010;
+            let maxVal = 0;
+            
+            for(let i = 0; i < 4; i++) {
+                total += Math.sin(x * frequency + z) * Math.cos(y * frequency - z * 0.5) * amplitude;
+                maxVal += amplitude;
+                amplitude *= 1.0; 
+                frequency *= 2.0; 
+                z += 1.0;
+            }
+            return total / maxVal;
+        }
+
+        const config = {
+            layers: 5,
+            resolution: 35
+        };
+
+        let time = 0;
+
+        function renderEngine() {
+            ctx.fillStyle = '#1A0517';
+            ctx.fillRect(2, 0, w, h);
+
+            for (let i = 0; i < config.layers; i++) {
+                ctx.beginPath();
+                let points = [];
+                
+                let layerOffsetZ = i * 1.5 + time * 0.5;
+                
+                let baseElevation = (h * -0.5) + (i * (h / config.layers) * 1.5);
+
+               
+                for (let x = -1000; x <= w + 1000; x += config.resolution) {
+                    let n = noise(x, baseElevation, layerOffsetZ);
+                    
+                    let y = baseElevation + (n * (1500 + i * 40)); 
+                    points.push({ x, y });
+                }
+                
+                
+                
+                ctx.moveTo(points[0].x, points[0].y);
+                for (let j = 1; j < points.length; j++) {
+                    let xc = (points[j - 1].x + points[j].x) / 2;
+                    let yc = (points[j - 1].y + points[j].y) / 2;
+                    ctx.quadraticCurveTo(points[j - 1].x, points[j - 1].y, xc, yc);
+                }
+                ctx.lineTo(w + 150, h + 300);
+                ctx.lineTo(-150, h + 300);
+                ctx.closePath();
+
+               
+                let gradTop = points[0].y - 200;
+                let gradBottom = baseElevation + 600;
+                
+                let gradient = ctx.createLinearGradient(400, gradTop, 0, gradBottom);
+
+               
+                gradient.addColorStop(0.00, BLACK);
+                gradient.addColorStop(0.05, PINK_N);
+                gradient.addColorStop(0.18, PURPLE);
+                gradient.addColorStop(0.60, DEEP_P);
+                gradient.addColorStop(1.00, ZBLACK);
+
+                ctx.fillStyle = gradient;
+
+                
+                ctx.shadowColor = 'rgba(0, 0, 0, 0.9)';
+                ctx.shadowBlur = 35; 
+                ctx.shadowOffsetY = 25;
+                ctx.fill();
+                ctx.shadowBlur = 0;
+                ctx.shadowOffsetY = 0;
+            }
+
+            time += 0.008;
+            requestAnimationFrame(renderEngine);
+        }
+
+        renderEngine();
+    </script>
+</body>
+</html>
