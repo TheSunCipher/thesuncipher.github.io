@@ -2,24 +2,28 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>THE SUN CIPHER — Android. Reimagined.</title>
-<meta name="description" content="THE SUN CIPHER is an Android software and cyber security organization focused on low-level Android engineering, privacy architecture, anti-tampering, and high-performance secure applications.">
-<meta name="keywords" content="The Sun Cipher, TheSunCipher, SunCipherOfficial, TSCApp, Android Security, Cyber Security, Android Internals, Reverse Engineering, Android Development, Anti Tamper, Privacy Focused Apps">
-<meta property="og:title" content="THE SUN CIPHER — Android. Reimagined.">
-<meta property="og:description" content="Android software and cyber security engineered from the system core.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+<title>THE SUN CIPHER — Redefining Android Experience — Faster, Safer & Smarter</title>
+<meta name="description" content="THE SUN CIPHER is an independent Android software and cyber security organization focused on building secure, lightweight and highly optimized applications for you.">
+<meta name="keywords" content="The Sun Cipher, TheSunCipher, SunCipherOfficial, TSCApp, Android Security, Cyber Security, Android Internals, Reverse Engineering, Android Development, Anti Tamper, Privacy Focused Apps, #TheSunCipher">
+<meta property="og:title" content="THE SUN CIPHER — Redefining Android Experience — Faster, Safer & Smarter">
+<meta property="og:description" content="THE SUN CIPHER is an independent Android software and cyber security organization focused on building secure, lightweight and highly optimized applications for you.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://thesuncipher.github.io">
-<meta property="og:image" content="https://thesuncipher.github.io/banner.jpg">
+<meta property="og:image" content="https://thesuncipher.github.io/logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="THE SUN CIPHER">
-<meta name="twitter:description" content="Android. Reimagined from the Core.">
-<meta name="twitter:image" content="https://thesuncipher.github.io/banner.jpg">
+<meta name="twitter:description" content="THE SUN CIPHER is an independent Android software and cyber security organization focused on building secure, lightweight and highly optimized applications for you.">
+<meta name="twitter:image" content="https://thesuncipher.github.io/logo.png">
 <link rel="canonical" href="https://thesuncipher.github.io/">
 <link rel="icon" type="image/png" href="/favicon.png">
 <meta name="google-site-verification" content="rNbZvvj0sCYBfO0wEKC5QWsDQLawLIYcnNtzNAZeNL0" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -28,14 +32,20 @@
   "url":"https://thesuncipher.github.io",
   "logo":"https://thesuncipher.github.io/logo.png",
   "sameAs":[
-    "https://github.com/TheSunCipher",
-    "https://linkedin.com/in/TheSunCipher",
-    "https://youtube.com/@TheSunCipher",
-    "https://twitter.com/TheSunCipher"
+    "Twitter https://twitter.com/TheSunCipher",
+	GitLab https://gitlab.com/TheSunCipher",
+	GitHub https://github.com/TheSunCipher",
+	Gitpage https://thesuncipher.github.io",
+	YouTube https://youtube.com/@TheSunCipher",
+	LinkedIn https://linkedin.com/in/TheSunCipher",
+	Facebook https://facebook.com/TheSunCipher",
+	Instagram https://Instagr.am/SunCipherOfficial",
+	Reddit ac https://reddit.com/u/TheSunCipher",
+	Telegram https://telegram.me/TheSunCipher",
+	Pinterest https://pinterest.com/TheSunCipher"
   ]
 }
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -54,8 +64,8 @@ html{scroll-behavior:smooth}
   --w:     #ffffff;
   --w2:    #f5f5f5;
   --w3:    #e5e5e5;
-  --muted: #666666;
-  --dim:   #333333;
+  --muted: #ffffff;
+  --dim:   #ffffff;
 
   /* glass */
   --glass:    rgba(255,255,255,.04);
@@ -69,9 +79,41 @@ html{scroll-behavior:smooth}
   --fm:'JetBrains Mono',monospace;
 }
 
-body{background:var(--bg);color:var(--w3);font-family:var(--fb);overflow-x:hidden}
-a{text-decoration:none;color:inherit}
-::-webkit-scrollbar{width:3px}
+body{
+  background:transparent;
+  color:var(--w3);
+  font-family:var(--fb);
+  overflow-x:hidden
+  padding-top:env(safe-area-inset-top);
+  padding-bottom:env(safe-area-inset-bottom);
+}
+
+*{
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+html,body{
+  overscroll-behavior:none;
+  touch-action:manipulation;
+  margin:0;
+  padding:0;
+  background:transparent;
+}
+
+a,button,img{
+  -webkit-user-drag:none;
+}
+
+a{
+  -webkit-touch-callout:none;
+}
+a{
+  text-decoration:none;color:inherit
+}
+::-web
 ::-webkit-scrollbar-track{background:#000}
 ::-webkit-scrollbar-thumb{background:var(--or);border-radius:3px}
 
@@ -92,10 +134,14 @@ a{text-decoration:none;color:inherit}
 /* ── NAV ─────────────────────────────── */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:200;
-  height:58px;display:flex;align-items:center;padding:0 22px;
-  background:rgba(0,0,0,.7);
+  height:30px;display:flex;align-items:center;padding:0 22px;
+  
+  padding-top:env(safe-area-inset-top);
+  height:calc(30px + env(safe-area-inset-top));
+
+  background:rgba(0,0,0,.4);
   backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
-  border-bottom:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(255,255,255,.08);
   transition:background .3s;
 }
 nav.solid{background:rgba(0,0,0,.95)}
@@ -367,7 +413,7 @@ h2{
 p.sub{font-size:.94rem;color:var(--muted);max-width:500px;line-height:1.85}
 
 /* ── ABOUT ───────────────────────────── */
-#about{background:var(--bg2)}
+#about{background:transparent}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start;margin-top:48px}
 
 .sk-list{display:flex;flex-direction:column;gap:8px;margin-top:22px}
@@ -421,7 +467,7 @@ p.sub{font-size:.94rem;color:var(--muted);max-width:500px;line-height:1.85}
 }
 
 /* ── FEATURES ────────────────────────── */
-#features{background:var(--bg3)}
+#features{background:transparent}
 .feat-grid{
   display:grid;grid-template-columns:repeat(3,1fr);
   gap:12px;margin-top:44px;
@@ -451,7 +497,7 @@ p.sub{font-size:.94rem;color:var(--muted);max-width:500px;line-height:1.85}
 .fc-d{font-size:.79rem;color:var(--muted);line-height:1.72}
 
 /* ── SERVICES ────────────────────────── */
-#services{background:var(--bg2)}
+#services{background:transparent}
 .srv-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:44px}
 .sc{
   padding:22px 24px;border-radius:12px;
@@ -474,7 +520,10 @@ p.sub{font-size:.94rem;color:var(--muted);max-width:500px;line-height:1.85}
 .sc-d{font-size:.79rem;color:var(--muted);line-height:1.7}
 
 /* ── CONTACT ─────────────────────────── */
-#contact{background:var(--bg);text-align:center}
+#contact{
+  background:transparent;
+  text-align:center
+}
 #contact h2,#contact p.sub{margin-left:auto;margin-right:auto;text-align:center}
 
 .email-a{
@@ -516,9 +565,18 @@ p.sub{font-size:.94rem;color:var(--muted);max-width:500px;line-height:1.85}
 
 /* ── FOOTER ──────────────────────────── */
 footer{
-  padding:24px 22px;border-top:1px solid rgba(255,255,255,.04);
-  display:flex;align-items:center;justify-content:space-between;
-  flex-wrap:wrap;gap:10px;background:#000;position:relative;z-index:2;
+padding:4px 22px;
+border-top 2px solid rgba(100,100,100,.08);
+display:flex;
+align-items:center;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:10px
+;background:rgba(0,0,0,.40);
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
+position:relative;
+z-index:2;
 }
 .ft-c{font-family:var(--fm);font-size:.6rem;color:var(--muted);letter-spacing:.06em}
 .ft-t{font-family:var(--fm);font-size:.58rem;color:rgba(249,115,22,.35);letter-spacing:.1em}
@@ -554,7 +612,7 @@ footer{
 <body>
 
 <!-- ANIMATED WAVE BACKGROUND -->
-<iframe src="fluid_bg.html" id="wave-cv"></iframe>
+<iframe src="/fluid_bg.html" id="wave-cv"></iframe>
 <!-- ════ NAV ════════════════════════════════════════════════ -->
 <nav id="nav">
   <div class="nav-inner">
@@ -644,9 +702,9 @@ footer{
             </div>
           </div>
           <div class="ph-stat">
-            <div class="ph-sr"><span class="ph-sl">CPU Load</span><span class="ph-sv">18%</span></div>
+            <div class="ph-sr"><span class="ph-sl">CPU Used</span><span class="ph-sv">08 %</span></div>
             <div class="ph-mb"><div class="ph-mf"></div></div>
-            <div class="ph-sr"><span class="ph-sl">RAM Used</span><span class="ph-sv">21 MB</span></div>
+            <div class="ph-sr"><span class="ph-sl">RAM Used</span><span class="ph-sv">15 MB</span></div>
             <div class="ph-mb"><div class="ph-mf" style="animation-delay:.7s"></div></div>
             <div class="ph-shield">
               <div class="shdot"></div>
@@ -839,53 +897,6 @@ const po=new IntersectionObserver(es=>es.forEach(e=>{
 }),{threshold:.3});
 const pc=document.querySelector('.perf');if(pc)po.observe(pc);
 
-/* ══ GLOBAL ANIMATED WAVE BACKGROUND ══════════════════════
-   Multiple sinusoidal waves drifting across the full page.
-   Colors: deep orange glow on pure black.
-   Very smooth, very subtle — adds depth without distraction.
-*/
-(function(){
-  const cv=document.getElementById('wave-cv');
-  const ctx=cv.getContext('2d');
-  let W,H,t=0;
-  const waves=[
-    {A:.06,f:.0018,spd:.0006,phase:0,   color:'rgba(249,115,22,'},
-    {A:.04,f:.0024,spd:.0009,phase:2.1, color:'rgba(251,146,60,'},
-    {A:.05,f:.0014,spd:.0004,phase:4.4, color:'rgba(249,115,22,'},
-    {A:.03,f:.003, spd:.0012,phase:1.1, color:'rgba(255,255,255,'},
-  ];
-  const resize=()=>{W=cv.width=innerWidth;H=cv.height=innerHeight};
-  const draw=()=>{
-    ctx.clearRect(0,0,W,H);
-    waves.forEach((w,i)=>{
-      /* compute amplitude in pixels */
-      const amp=H*w.A;
-      const yBase=H*(0.2+i*0.22);
-      ctx.beginPath();
-      for(let x=0;x<=W;x+=4){
-        const y=yBase+amp*Math.sin(x*w.f+t*w.spd+w.phase);
-        x===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
-      }
-      /* fill below the wave to bottom with gradient */
-      ctx.lineTo(W,H);ctx.lineTo(0,H);ctx.closePath();
-      const grd=ctx.createLinearGradient(0,yBase-amp,0,yBase+amp*2);
-      grd.addColorStop(0,w.color+'0.03)');
-      grd.addColorStop(1,w.color+'0)');
-      ctx.fillStyle=grd;ctx.fill();
-      /* draw the wave line itself */
-      ctx.beginPath();
-      for(let x=0;x<=W;x+=3){
-        const y=yBase+amp*Math.sin(x*w.f+t*w.spd+w.phase);
-        x===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
-      }
-      ctx.strokeStyle=w.color+'0.18)';ctx.lineWidth=1.2;ctx.stroke();
-    });
-    t++;
-    requestAnimationFrame(draw);
-  };
-  window.addEventListener('resize',resize);
-  resize();draw();
-})();
 
 /* ══ SECTION WAVE CANVASES ═════════════════════════════════ */
 function makeSectionWave(id, colorA, colorB){
@@ -942,4 +953,4 @@ makeSectionWave('cw-cct',  'rgb(251,146,60)','rgb(249,115,22)');
 }
 </script>
 </body>
-</html>
+                                                                                                                                          </html>
